@@ -1,0 +1,66 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include <Windows.h>
+#include <stdlib.h>
+
+//猜数字游戏
+void menu()
+{
+	printf("|-----------菜单----------|\n");
+	printf("|*********1.Play**********|\n");
+	printf("|*********2.Exit**********|\n");
+	printf("|-------------------------|\n");
+}
+
+void game()
+{
+	//生成一个随机数
+	int ret = rand() % 100 + 1;
+	//猜数字
+	while (1)
+	{
+		int a = 0;
+		printf("请猜数字：");
+		scanf("%d", &a);
+		if (a > ret)
+		{
+			printf("猜大了\n");
+		}
+		else if (a < ret)
+		{
+			printf("猜小了\n");
+		}
+		else
+		{
+			printf("猜对了\n");
+			break;
+		}
+	}
+}
+
+int main()
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));
+	do
+	{
+		menu();
+		printf("请输入1或2:");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 2:
+			printf("退出游戏\n");
+			break;
+		default:
+			printf("选择错误\n");
+			break;
+		}
+
+	} while (input!=2);
+	return 0;
+}
