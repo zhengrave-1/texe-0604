@@ -1,0 +1,22 @@
+//1000-2020年间的闰年
+//int main()
+//{
+//	int i = 0;
+//	int cout = 0;
+//	int year = 1000;
+//	for (year = 1000; year < 2021; year++)
+//	{
+//		if (year % 4 == 0 && year % 100 != 0)
+//		{
+//			printf("%d ", year);
+//			cout++;
+//		}
+//		else if (year % 400 == 0)
+//		{
+//			printf("%d ", year);
+//			cout++;
+//		}
+//	}
+//	printf("\n%d", cout);
+//		return 0;
+//}
